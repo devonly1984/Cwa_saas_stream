@@ -5,7 +5,7 @@ import {
 } from "@/components/ui/command";
 
 import { Dispatch, SetStateAction } from "react";
-import CommandResponsiveDialog from "@/components/shared/dialogs/CommandResponsiveDialog";
+import CommandResponsiveDialog from "./CommandResponsiveDialog";
 
 interface Props {
   open: boolean;

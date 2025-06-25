@@ -1,29 +1,27 @@
-import ErrorState from "@/components/shared/ErrorState";
-import LoadingState from "@/components/shared/LoadingState";
-import AgentsView from "@/components/agents/views/AgentsView";
+import ErrorState from "@/components/shared/states/ErrorState";
+import LoadingState from "@/components/shared/states/LoadingState";
+import { AgentsListHeader, AgentsView } from "@/components/agents";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
-import AgentsListHeader from "@/components/agents/header/AgentsListHeader";
 import { auth } from "@/lib/auth";
 import { headers as getHeaders } from "next/headers";
 import { redirect } from "next/navigation";
 import type { SearchParams } from "nuqs";
-import { loadSearchParams } from "@/hooks/params";
+import { loadSearchParams } from "@/hooks/agents/params";
 interface Props {
   searchParams: Promise<SearchParams>;
 }
-const AgentsPage = async ({searchParams}:Props) => {
+const AgentsPage = async ({ searchParams }: Props) => {
   const params = await loadSearchParams(searchParams);
   const session = await auth.api.getSession({
-    headers: await getHeaders()
-  })
-    if (!session) {
-      redirect("/sign-in");
-    
-    }
-    
+    headers: await getHeaders(),
+  });
+  if (!session) {
+    redirect("/sign-in");
+  }
+
   const queryClient = getQueryClient();
   void queryClient.prefetchQuery(
     trpc.agents.getMany.queryOptions({
@@ -32,7 +30,7 @@ const AgentsPage = async ({searchParams}:Props) => {
   );
   return (
     <>
-    <AgentsListHeader/>
+      <AgentsListHeader />
       <HydrationBoundary state={dehydrate(queryClient)}>
         <Suspense
           fallback={

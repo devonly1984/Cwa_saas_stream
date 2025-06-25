@@ -25,7 +25,7 @@ const SocialButtons = ({ setError, setIsPending }: Props) => {
         onError: ({
           error,
         }: {
-          error: BetterFetchError & Record<string, any>;
+          error: BetterFetchError & Record<string, string>;
         }) => {
           setError(error.message);
         },

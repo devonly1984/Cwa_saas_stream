@@ -1,8 +1,10 @@
-import { SearchIcon } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import useAgentsFilters from "@/hooks/agents/useAgentsFilters"
-const AgentSearch = () => {
-    const [filters,setFilters]  =useAgentsFilters()
+"use client"
+import { SearchIcon } from "lucide-react";
+import { Input } from "@/components/ui/input";
+
+import useMeetingsFilters from "@/hooks/meetings/useMeetingsFilters";
+const MeetingFilters = () => {
+  const [filters, setFilters] = useMeetingsFilters();
   return (
     <div className="relative">
       <Input
@@ -14,5 +16,5 @@ const AgentSearch = () => {
       <SearchIcon className="size-4 absolute left-2 top-1/2 -translate-y-1/2 text-muted-foreground" />
     </div>
   );
-}
-export default AgentSearch
+};
+export default MeetingFilters;

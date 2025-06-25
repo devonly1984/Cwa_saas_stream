@@ -11,7 +11,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { MeetingGetOne } from "@/index";
+import { MeetingGetOne } from "@/constants";
 import {
   MeetingInsertSchema,
   meetingInsertSchema,
@@ -25,7 +25,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import GeneratedAvatar from "@/components/shared/GeneratedAvatar";
-import NewAgentDialog from "@/components/agents/dialog/NewAgentDialog";
+import {NewAgentDialog} from "@/components/agents";
 interface MeetingFormProps {
   onSuccess?: (id?: string) => void;
   onCancel?: () => void;
