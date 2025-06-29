@@ -4,7 +4,7 @@ import { DataTable } from "@/components/shared/tables/DataTable";
 import { useTRPC } from "@/trpc/client";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { meetingColumns } from "@/components/shared/tables/meetingsColumns";
-import EmptyState from "@/components/shared/states/EmptyState";
+import {EmptyState} from "@/components/shared/states";
 import { useRouter } from "next/navigation";
 import useMeetingsFilters from "@/hooks/meetings/useMeetingsFilters";
 import DataPagination from "@/components/shared/tables/DataPagination";

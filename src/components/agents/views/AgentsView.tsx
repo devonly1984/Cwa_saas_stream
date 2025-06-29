@@ -4,7 +4,7 @@ import { useTRPC } from "@/trpc/client";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { DataTable } from "../../shared/tables/DataTable";
 import { agentColumns,  } from "../../shared/tables/agentColumns";
-import EmptyState from "@/components/shared/states/EmptyState";
+import {EmptyState} from "@/components/shared/states";
 import useAgentsFilters from "@/hooks/agents/useAgentsFilters";
 import DataPagination from "../../shared/tables/DataPagination";
 import { useRouter } from "next/navigation";

@@ -2,7 +2,7 @@
 
 import GeneratedAvatar from "@/components/shared/GeneratedAvatar";
 import { Badge } from "@/components/ui/badge";
-import { AgentGetMany } from "@/index"
+import { AgentGetMany } from "@/constants"
 import { ColumnDef } from "@tanstack/react-table"
 import { CornerDownRight, VideoIcon } from "lucide-react";
 

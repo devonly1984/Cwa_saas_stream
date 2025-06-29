@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { AgentGetOne } from "@/index";
+import { AgentGetOne } from "@/constants";
 import { AgentInsertSchema, agentsInsertSchema } from "@/lib/schemas/AgentSchema";
 import { useTRPC } from "@/trpc/client";
 import { zodResolver } from "@hookform/resolvers/zod";

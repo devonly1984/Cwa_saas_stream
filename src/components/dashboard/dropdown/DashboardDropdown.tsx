@@ -8,7 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { AuthClientType } from "@/index";
+import { AuthClientType } from "@/constants";
 import { ChevronDown, CreditCard, LogOut } from "lucide-react";
 interface DashboardDropdownProps {
   data: AuthClientType;

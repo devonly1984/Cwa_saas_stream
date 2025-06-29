@@ -1,24 +1,24 @@
 import ResponsiveDialog from "@/components/shared/dialogs/ResponsiveDialog"
-import AgentForm from "../forms/AgentForm";
-import { AgentGetOne } from "@/constants";
-interface UpdateAgentDialogProps {
+import {MeetingForm} from "@/components/meetings";
+import { MeetingGetOne } from "@/constants";
+interface UpdateMeetingDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  initialValues: AgentGetOne;
+  initialValues: MeetingGetOne;
 }
-const UpdateAgentDialog = ({
+const UpdateMeetingDialog = ({
   open,
   onOpenChange,
   initialValues
-}: UpdateAgentDialogProps) => {
+}: UpdateMeetingDialogProps) => {
   return (
     <ResponsiveDialog
-      title="Edit Agent"
-      description="Edit Agent Details"
+      title="Edit Meeting"
+      description="Edit Meeting Details"
       open={open}
       onOpenChange={onOpenChange}
     >
-      <AgentForm
+      <MeetingForm
         onSuccess={() => onOpenChange(false)}
         onCancel={() => onOpenChange(false)}
         initialValues={initialValues}
@@ -26,4 +26,4 @@ const UpdateAgentDialog = ({
     </ResponsiveDialog>
   );
 };
-export default UpdateAgentDialog
+export default UpdateMeetingDialog

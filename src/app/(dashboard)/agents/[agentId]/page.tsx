@@ -1,6 +1,5 @@
 import {AgentIdView} from "@/components/agents";
-import ErrorState from "@/components/shared/states/ErrorState";
-import LoadingState from "@/components/shared/states/LoadingState";
+import { LoadingState, ErrorState } from "@/components/shared/states";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import { Suspense } from "react";

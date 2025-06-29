@@ -10,7 +10,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { AuthClientType } from "@/index";
+import { AuthClientType } from "@/constants";
 import { ChevronDown, CreditCard } from "lucide-react";
 interface DashboardDrawerProps {
     data:AuthClientType;

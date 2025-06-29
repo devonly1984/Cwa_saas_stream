@@ -3,7 +3,7 @@ import { format } from "date-fns";
 import humanizeDuration from "humanize-duration";
 import GeneratedAvatar from "@/components/shared/GeneratedAvatar";
 import { Badge } from "@/components/ui/badge";
-import { MeetingGetMany } from "@/index";
+import { MeetingGetMany } from "@/constants";
 import { ColumnDef } from "@tanstack/react-table";
 import {
   CircleCheckIcon,
