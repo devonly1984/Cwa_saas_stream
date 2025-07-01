@@ -1,6 +1,5 @@
 "use client";
 import { format } from "date-fns";
-import humanizeDuration from "humanize-duration";
 import GeneratedAvatar from "@/components/shared/GeneratedAvatar";
 import { Badge } from "@/components/ui/badge";
 import { MeetingGetMany } from "@/constants";
@@ -13,14 +12,8 @@ import {
   CornerDownRight,
   LoaderIcon,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
-const formatDuration = (seconds: number) => {
-  return humanizeDuration(seconds * 1000, {
-    largest: 1,
-    round: true,
-    units: ["h", "m", "s"],
-  });
-};
+import { cn, formatDuration } from "@/lib/utils";
+
 const statusIconMap = {
   upcoming: ClockArrowUpIcon,
   active: LoaderIcon,

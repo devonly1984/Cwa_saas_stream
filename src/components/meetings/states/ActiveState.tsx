@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import EmptyState from "./EmptyState";
+import EmptyState from "../../shared/states/EmptyState";
 import Link from "next/link";
 import { Video } from "lucide-react";
 interface Props {

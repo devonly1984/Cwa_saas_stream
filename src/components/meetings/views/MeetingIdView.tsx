@@ -14,6 +14,7 @@ import {
   ActiveState,
   UpcomingState,
 } from "@/components/shared/states";
+import CompletedState from "@/components/meetings/states/CompletedState";
 interface Props {
     meetingId: string;
 }
@@ -78,7 +79,7 @@ const MeetingIdView = ({meetingId}:Props) => {
             isCancelling={isCancelled}
           />
         )}
-        {isCompleted && <div>Completed</div>}
+        {isCompleted && <CompletedState data={data}/>}
       </div>
     </>
   );

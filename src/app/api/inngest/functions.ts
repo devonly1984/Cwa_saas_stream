@@ -33,7 +33,7 @@ Example:
 });
 
 
-export const meetingsProcessing = inngest.createFunction(
+const meetingsProcessing = inngest.createFunction(
     {id: 'meetings/processing'},
     {event: 'meetings/processing'},
     async({event,step})=>{
@@ -97,3 +97,4 @@ await step.run('save-summary',async()=>{
     }
 
 )
+export {meetingsProcessing,summarizer}

@@ -1,4 +1,4 @@
-import EmptyState from "./EmptyState";
+import EmptyState from "../../shared/states/EmptyState";
 
 const ProcessingState = () => {
   return (

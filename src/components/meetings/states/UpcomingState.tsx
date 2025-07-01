@@ -1,5 +1,5 @@
 "use client"
-import EmptyState from "./EmptyState";
+import EmptyState from "../../shared/states/EmptyState";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Video, Ban } from "lucide-react";
